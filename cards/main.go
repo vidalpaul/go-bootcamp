@@ -1,15 +1,16 @@
 package main
 
-import (
-	"fmt"
-)
-
-var deckSize int
+import "fmt"
 
 func main() {
-	// var card string = "Ace of Spades"
-	card := "Ace of Spades"
-	card = "Five of Diamonds"
-	fmt.Println(card)
-	fmt.Println(deckSize)
+	cards := []string{newCard(), "Ace of Diamonds"}
+	cards = append(cards, "Six of Spades")
+	for index, card := range cards {
+		fmt.Println(index, card)
+	}
+
+}
+
+func newCard() string {
+	return "Five of Diamonds"
 }
